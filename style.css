@@ -1,0 +1,155 @@
+body{
+/*    all bodies*/
+    background: #d0d0d2;
+    margin: 0;
+}
+div.container{
+    width: 780px;
+    margin:0 auto;
+    background: #FFF;
+    box-shadow: 0px 9px 11px 7px;
+/*    box-shodow to get the ilussion of 3d of the div main container of each page, first number is for left and right*/
+}
+header.header{
+    padding: 45px 0px 20px 30px;
+    /* top right bottom left*/
+    text-align: center;
+}
+a.link-title{
+    text-decoration: none;/*remove link features (blue and underline*/
+    font-size: 50px;
+    
+    color: #27613f;
+    font-family: "Arial Narrow", "Myria Pro";
+}
+
+header.header a:hover{
+    color: black;
+}
+nav.menu{
+    background: #27613f;
+    padding: 6px 0 6px 40px;
+    /* top right bottom left*/
+    text-align: center;
+}
+nav.menu a{
+    color: #f1f1f1; 
+/*    #f1f1f1 is white*/
+    text-decoration: none;
+/*    always remove decoration from links*/
+    font-size: 14px;
+    font-family: "Arial Narrow", "Myria Pro";
+/*    if browser doesn't support Arial Narrow, Myria Pro can be used instead*/
+}
+nav.menu a:hover{
+    color: black;
+}
+
+aside{
+    float: left;
+    width: 120px;
+    padding: 30px 0 0 40px;
+/*    make it float to place it in the left or right side of its container so that it can wrap arouund it from the left and grow as more content is added*/
+}
+h1{
+    margin: 0px;
+    color: #869843;
+    font-size: 24px;
+    font-family:  "Arial Narrow", "Myria Pro";
+    font-weight: normal;
+/*    remore bold*/
+}
+h2{
+    color: #27613f;
+    font-size: 15px;
+    margin: 20px 0 5px 0;
+    /* top right bottom left*/
+    
+}
+article.main{
+    margin: 0 0 0 180px;
+    padding: 35px 40px 30px 0;
+    color: #444444;
+    font-family: "Gorgia";
+    font-size: 13px;
+    line-height: 18px; 
+    text-emphasis: justify;
+}
+article.main a:hover{
+    color: #444444; /*to make the link have some color as text when clicking on it*/ 
+} 
+
+#home-image img{
+/*    make the image dynamic/autoscaling*/
+    width:100%;
+}
+
+footer{
+    padding: 6px 40px 6px 40px;
+    background: #d6d6d6;
+    font-family: "Lucida Sans Unicode";
+    font-size: 11px;
+    text-decoration: right; 
+}
+footer a{
+    /*footer links*/
+    text-decoration: none; /*make it look like normal text no underline or anything*/
+    color: #262626;
+}
+span.seperator{
+    color: #f1f1f1;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+/*********About Page styles*******/
+#about-page #home-image img{
+    width:70%;
+    float:left;
+    margin-bottom: 20px;
+/*    since this is a floating element, fixing the top margin of the paragraph below won't do nothing cuz the image is a floating elemtn, so instead we fix the bottom margin of the floating element iteself */
+}
+
+#about-page #profile-info{
+    
+    width:20%;
+    float:right;
+    margin: 5px;
+/*    since we need 5px left and right, leading to total of 10 px in margin, then the width is 20%*/
+}
+#about-page .description{
+    clear: both;
+/*    this will take the paragraphs to the bottom and prevent them from going up in between the image and the #profile info div*/
+}
+
+/*********Contact********/
+#contact #form{
+    width: 500px;
+    padding: 10px 10px 10px 10px;
+    margin: 0 auto;
+    box-shadow: 0px 9px 11px 5px;
+    border-radius: 5px;
+}
+h1.page-heading{
+    text-align: center;
+    margin-bottom: 20px;
+/*    make it universal to all page-heading classes*/
+}
+
+#contact #form input{
+    width: 100%;
+    border-radius: 5px;
+    height: 20px;
+    background: #e5e8e6;
+}
+
+#contact #form #message{
+    width: 100%;
+    border-radius: 5px;
+    background: #e5e8e6;
+}
+#contact #form #submit {
+    height: 30px;
+    background: #27613f;
+    color: #FFFFFF;
+}
