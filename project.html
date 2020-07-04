@@ -1,58 +1,197 @@
+<script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+<script src="js/hover.js"></script>
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Minimalistic Website</title>
-    <link rel="stylesheet" href="css/style.css">
-    <script src="js/script.js"> </script>
-</head>
+  <head>
+  <meta charset="UTF-8">
+  <title>Aisha Eldeeb</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/ionicons.min.css">
+  </head>
 <body>
-    <div class="container">
-         <!--the div will be used in other files thats y we give it class no id-->
-        
-        <header class="header">
-        <a class="link-title" href="/">Minimalistic Website</a>
-        </header>
-        
-        <nav class="menu">
-        <a href="/">Home</a> &nbsp; &nbsp; &nbsp;
-        <a href="about.html">About Us</a>&nbsp; &nbsp; &nbsp;
-        <a href="contact.html">Contact</a>&nbsp; &nbsp; &nbsp;
-            <!--nav is for navigation-->
-            <!--&nbsp is non-breaking space-->
-        </nav>
-        
-        <aside>
-            <h1>
-            Side Bar
-            </h1>
-        </aside>
-        <article class="main">
-        <!-- <img src="http://placehold.it/300x200" alt="">-->
-        <div id="home-image">
-            <img src="images/home.jpeg" alt="Home image" > 
-            <!--alt is for search engines and some other devices??-->
-        </div>
-            
-        <p>
-        Ad scelerisque per class tempor aliquet magna vivamus iaculis cubilia morbi diam. Et luctus laoreet semper dis justo nisi tortor.
-        </p>
-        <p>
-        Why do we use it?
-        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
-        </p>
-        <p>
-        Why do we use it?
-        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
-        </p>
-        </article>
-        <footer>
-            &copy; 2030 Minimalistic Website &nbsp;<span class="seperator">|</span> 
-            <!--use span to style a sepecific piece of text/word/symbol  seprately-->
-            Dsign by  <a href="http://www.https://www.memeworld.com">Aisha Eldeeb</a>
-            <!--  cpywrite symbol-->
-        </footer>
-    </div>
+<!-- navigation bar -->
+ 
 
+<nav class="navbar"> 
+  <div class="container"> <!--to push the logo to the right -->
+  <div class="logo-div">
+    <img class="logo"  src="https://user-images.githubusercontent.com/66275371/85233758-81012100-b411-11ea-868c-4a567dbac8c1.png" alt="logo">
+  </div>
+  <div id="navbar">
+   <ul class="menu">
+  <li><a class="nav_link" href="aishaeldeeb.com">Home</a></li>
+  <li><a class="nav_link"href="#about">About</a></li>
+  <li><a class="nav_link" href="#work">Work</a></li>
+  <li><a class="nav_link" href="#contact">Contact</a></li>
+  </ul>
+  </div>
+ 
+</div>
+</nav>
+
+<!-- main bady -->
+<main id="main">
+  
+<!-- hero/header section -->
+<header>
+ <section class="hero" id="welcome-section">
+
+ <h1>Hey, I'm Aisha Eldeeb</h1> 
+<!-- h1,2.. and p have block property by default -->
+ <h2>Electrical Engineer & Web Developer</h2>
+   
+  <a href="#work"class="btn-work">View Work</a>
+  <a href="mailto:aishaeldeeb32@gmail.con" class="btn-contact">Say Hi</a>
+   <!--a have an inline property by default -->
+   
+  </section>
+</header>
+ 
+<!--about section-->
+<section id ="about"class="about-me">
+  <h2>About Me</h2>
+<!--   about me title with h2 element which has a display block, which will take the full width of the page  -->
+  <div class="col-left">
+    <img src="https://aishaeldeeb.com/wp-content/uploads/2020/06/about-me-1.jpg" alt="Aisha-photo">
+  </div>
+  <div class="col-right">
+    <p class="aboutme">I’m Aisha, a self-taught web developer fueled by the passion for creating cool stuff online. I’m currently studying my last semester as an electrical engineering student at Qatar University.</p>
+    <br>
+     <p class="aboutme">I aspire for a career that will push me to code beautifully and to solve challenging problems.</p>
+    <br>
+    <p>When I'm not coding, you will find me at my favourite coffee shop or playing with cats.</p>
+    <br>
+    <a href="https://drive.google.com/file/d/1bJ9YvxFQ_-bUr8zmOIg-9ZnlM74XdVer/view?usp=sharing" class="btn-cv">Download CV</a>
+    
+  </div> 
+</section>
+<!--skills section-->
+<div class="skills">
+  <h2>Skills</h2> 
+  
+  <div class="first">
+    <i class="ion-social-html5"><h4>HTML</h4></i>
+    
+  </div>
+  <div class="second">
+    <i class="ion-social-css3"><h4>CSS</h4></i>
+    
+  </div>
+  
+  <div class="third">
+    <i class="ion-social-javascript"><h4>JavaScript</h4></i>
+  </div>
+
+  <div class="fourth">
+    
+    <img height="38px" onmouseover="hover(this);" onmouseout="unhover(this);" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABmJLR0QA/wD/AP+gvaeTAAAFEUlEQVRogc3aWaydUxQH8N9tTwdD69ZQCTUrRVVbqQcxhUg8IBFDBA9ogxcRMzFU8CKeRAhBjBGJkNRQMYYUlapQQ1Djg6ktbrWXluJ6WPvL+c7JGfa597jn/pOV737f2Xut9f++vddae+/bZ2SYgHmYhZnYF3tiGrbClCSwMckmDOBbfJHkc7yPLcN1pG8YfebgRByDw7HNcI3X4Xe8hdfxHD7qkt4aTMFFeBdDoyQrks3ii44IFVyAn0aRQL38jKsxcbgkZorP2ysC9fKRmIMd4Sj8Mgacb/R1jsolsQ/WjwGnm8kA9soh8vgYcLadPFbvdKPwO4D+HMY9xAC2Lz8Y1yNHuo5GRJaOuhed4/mcRnsb+5N9z1zGR4pQ12un62UdjsglsXO67oNVY8D5Qj5IPpV9bImvcWD6uyLqnTU9JLAm+VBJPh2Eb3KIDGEQl2F8ejZF1FzvjCKB5clmUTRWcIWokodyiRSyCqerjW4H4Sq8INYX3XJ8o4iYV6qOCMn2Gfiwrn0NGiXERmxX436R9b8vPa9gLvYXReZMUT70i4XVdtg2tR3Eb2JhtV4Mj/LC6gP8XdI9A2dhUdLb0vdcIgX+xTK8jFexss74SFDBAhyH40V0apWw2xIZlL/q24xPxNv8VHyt78QEXS9Irk9t+5Oz/SLq7IZdcQAOEUN2cqbdQRkLrmf1PtS2kyU5bOeIcdxrZ5vJH5idQwROFp+v107XyyBOyiVRzJu5Ijn22vlCvhJzqexjSzwpQiex4L9EFGq9IrARN5V8mqTBwqoRhkRYnVd6tgMuNbq116pkc4eSH/PxXvo9i8iQ2PW7E7vX/T4PN+AV1XKhG/K7yE/Xi2Fdxh64S4Tzon0NchLiFjHcHsJr+Kf028REbH+xVVNsmeZk9m/xZZJiy/Svku4KjsW5okyqqEXbedLqra3BfThbJLNuYwbOSTbWtvGlBiPdfPhOZPaPxZv9QZBdq5rRB9J1WroWmX06dhF11GxRKM7ItLtBfO2WeEbvQ207eSaH7cH4cww420z+UM0nbXGKmHi9drpeNuPUXBIFjhBrhv/Dofda2L2uSZ9vxKZINu5VDXVTcYvurgSHcE8L+0vq2m7AraphfDIezSEyJE6Oylv4O+EaEe+7QWRh0ntHuv9HNQr9kJ6tFuciO5b8mCUOgIZyiRTj8XYRJgv04TDciDdFshwOkTlJ39vp/tN0P1XUVYeqTQ3TcXedvWwihWzCA2L5OaGu7aRkdKFY6TXDJOwndkWWid2ZCarrnkdyHOsUrd7kr3gYp4n6ZySYX9J78Qh1NcSv8ofIL6J4vDb1ndak3RZ8JqrZYshc2KTtOrEHcP4wdNbg6Q6IFPJC6nt0RtuC9ANt2v0ritEsnY22W24Q2bMTrErXcvl9mHhTk8R5/Lr0/IJ0XVDq25dkKp5Kz/tExMrS2YjIJzhTlCmdEilKh79FIUlUCMuTSM5uo7qbuKKkZ6Pafd21HehsigXyM3vh1Mp0/3GdrnGqZ/VviAxd9F1U1/Zl1fnX14HOltgai7XO7JtEJVBRDadF5h0vjgIeLLU/D5eX7oucUjhXHDIt7VBnFvrFTvgXDYisTG1mtyBbyJLkyBPpflB1x5/YbSzaLu5QZ8eYi5tFZt8sog+xaqw3skEsaV8U4bQw+JXGQ+L8Ut8TOtQ5IkxWLWFuKxmb3rRHZ/g/dLbFS8ngj73Q2c1z9mLSdvP/rLJ1/gcrQd7GwNz8/AAAAABJRU5ErkJggg==" />
+    <h4>PHP</h4>
+  </div>
+
+
+  <div class="fifth">
+    <div class="icons8-matlab"></div>
+    <h4>MATLAB</h4>
+  </div>
+  
+
+  <!-- <div class="sixth">
+    <i class="ion-social-javascript"><h4>SIMULINK</h4></i>
+  </div> -->
+</div>
+
+
+<!-------------work section----------------->
+<section  id="projects" class="project-section" >
+<div class="project-tile" id="work"  class="main-section">
+  <h2 class="section-title" id="work-title">Work I've done</h2>
+  <div class ="first-project">
+      <a
+      class="project-element"
+      href="https://codepen.io/aishaeldeeb/full/abdZydd"
+      target="_blanket"
+      >
+      <img class="project-image" width="400" src="https://user-images.githubusercontent.com/66275371/85232619-ed2b5700-b408-11ea-919d-3d371fbb5e8f.png">
+      
+      <p class "project-discription">Survey Form <i class="ion-social-github"></i>
+        <i class="ion-social-codepen"></i></p>
+        
+      </a>
+  </div>
+  <div class="second-project">
+      <a
+        class="project-element, project2"
+        href="https://codepen.io/aishaeldeeb/pen/YzwNwVq"
+        target="_blanket"
+        >
+        <img class="project-image" width="500" src="https://user-images.githubusercontent.com/66275371/85232560-68d8d400-b408-11ea-9b6a-057c5b697d67.png">
+         
+        <p class "project-discription">Technical Documentation <i class="ion-social-github"></i>
+          <i class="ion-social-codepen"></i></p>
+        
+      </a>
+  </div>
+  <div class="third-project">
+      <a
+      class="project-element"
+      href="https://codepen.io/aishaeldeeb/pen/XWXjQYJ"
+      target="_blanket"
+      >
+      <img class="project-image" width="400" src="https://user-images.githubusercontent.com/66275371/85232594-bce3b880-b408-11ea-890a-21df838647a4.png">
+      
+      <p class "project-discription">Product Landing Page  <i class="ion-social-github"></i>
+        <i class="ion-social-codepen"></i></p>
+      
+      </a>
+  </div>
+  <div class="forth-project">
+    <a
+     class="project-element"
+     href="https://codepen.io/aishaeldeeb/full/rNxeogm"
+     target="_blanket"
+     >
+     <img class="project-image" width="400" src="https://user-images.githubusercontent.com/66275371/85232631-121fca00-b409-11ea-90a4-d7e77a11c7cd.png" >
+      <p class "project-discription">Tribute Page  <i class="ion-social-github"></i>
+        <i class="ion-social-codepen"></i></p>
+     </a>
+  </div>
+</div>
+  
+</section>
+  
+ <!-- contact section -->
+<section id ="contact" class="contact-section">
+  <div class="contact-container" id="contact" class="main-section">
+    <a href="mailto:aishaeldeeb32@gmail.con" class="btn-contact">Contact Me</a>
+    <h2>Let's create cool stuff together!</h2>
+    <div class="social-media">
+  <a target="_blank" href="https://www.instagram.com/aisha_eldeeb/?hl=en" class="instagram"><i class="fa fa-instagram"></i></a>
+      
+  <a target="_blank" href="https://twitter.com/aisha_eldeeb" class="twitter"><i class="fa fa-twitter"></i></a>
+      
+  <a target="_blank"  href="https://www.linkedin.com/in/aisha-eldeeb-960372170/" class="linkedin"><i class="fa fa-linkedin"></i></a>
+      
+  <a target="_blank" href="https://codepen.io/aishaeldeeb" class="codepen"><i class="fa fa-codepen"></i></a>
+      
+  <a target="_blank" href="https://github.com/aishaeldeeb" class="github" id="profile-link"><i class="fa fa-github"></i></a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-text">
+    <p>&copy 2020, AlL rights reserved, Developed by <a target="_blank" href="aishaeldeeb.com">Aisha Eldeeb</a>
+      <br>
+      Made with <i class="ion-heart"></i> and lots of <i class="ion-coffee"></i>
+    </p>
+    
+    
+  </div>
+</footer>
+  
+</main>
 </body>
+  
 </html>
