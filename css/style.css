@@ -13,6 +13,9 @@
 body{
   background:#24252a;
 }
+html{
+  scroll-behavior: smooth;
+}
 
 /* ----------navigation section---------- */
 .navbar{
