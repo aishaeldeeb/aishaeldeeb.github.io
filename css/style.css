@@ -1,155 +1,463 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
+@import url('http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css');
+*{
+
+  margin:0;
+  padding:0;
+  color:#edf1f0;
+  font-family: 'Noto Sans JP', sans-serif;
+}
+*, *::before, *::after{
+  box-sizing:border-box;
+}
 body{
-/*    all bodies*/
-    background: #d0d0d2;
-    margin: 0;
-}
-div.container{
-    width: 780px;
-    margin:0 auto;
-    background: #FFF;
-    box-shadow: 0px 9px 11px 7px;
-/*    box-shodow to get the ilussion of 3d of the div main container of each page, first number is for left and right*/
-}
-header.header{
-    padding: 45px 0px 20px 30px;
-    /* top right bottom left*/
-    text-align: center;
-}
-a.link-title{
-    text-decoration: none;/*remove link features (blue and underline*/
-    font-size: 50px;
-    
-    color: #27613f;
-    font-family: "Arial Narrow", "Myria Pro";
+  background:#24252a;
 }
 
-header.header a:hover{
-    color: black;
+/* ----------navigation section---------- */
+.navbar{
+
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width:100%;
+  overflow:hidden;
+  height:100px;
+  line-height:70px;
+  background:rgba(78, 78, 78, 0.7);
+  border-bottom:3px solid black;
 }
-nav.menu{
-    background: #27613f;
-    padding: 6px 0 6px 40px;
-    /* top right bottom left*/
-    text-align: center;
+.container{
+  
+  width:90%;
+  margin: 0 auto;
 }
-nav.menu a{
-    color: #f1f1f1; 
-/*    #f1f1f1 is white*/
-    text-decoration: none;
-/*    always remove decoration from links*/
-    font-size: 14px;
-    font-family: "Arial Narrow", "Myria Pro";
-/*    if browser doesn't support Arial Narrow, Myria Pro can be used instead*/
+.logo{
+  width:90px;
+  float:left;
 }
-nav.menu a:hover{
-    color: black;
+.logo:hover{
+  cursor:pointer;
+}
+.menu{
+  
+  float: right;
+}
+.menu li{
+ 
+  float:left;
+  list-style:none;
+  width:120px;
+  height:100px;
+  text-align:center;
+  padding-top:15px;
+}
+.menu li a{
+  text-decoration:none;
+  text-transform:uppercase;
+  display:block;
+  color:#edf1f0;
+}
+.menu li:hover{
+  background:#edf1f0;
+}
+.menu li a:hover{
+  color:#000;
 }
 
-aside{
-    float: left;
-    width: 120px;
-    padding: 30px 0 0 40px;
-/*    make it float to place it in the left or right side of its container so that it can wrap arouund it from the left and grow as more content is added*/
-}
-h1{
-    margin: 0px;
-    color: #869843;
-    font-size: 24px;
-    font-family:  "Arial Narrow", "Myria Pro";
-    font-weight: normal;
-/*    remore bold*/
-}
-h2{
-    color: #27613f;
-    font-size: 15px;
-    margin: 20px 0 5px 0;
-    /* top right bottom left*/
-    
-}
-article.main{
-    margin: 0 0 0 180px;
-    padding: 35px 40px 30px 0;
-    color: #444444;
-    font-family: "Gorgia";
-    font-size: 13px;
-    line-height: 18px; 
-    text-emphasis: justify;
-}
-article.main a:hover{
-    color: #444444; /*to make the link have some color as text when clicking on it*/ 
-} 
+/* ----------welcome section ----------*/
 
-#home-image img{
-/*    make the image dynamic/autoscaling*/
-    width:100%;
+#welcome-section{
+height:100hv;
 }
+.hero{
+  height:600px;
+  background-image: url('https://user-images.githubusercontent.com/66275371/85883313-7536a580-b7e9-11ea-94eb-337156a478e5.jpg');
+  background-size:cover;
+  background-repeat:no-repeat;
+  
+  text-align:center;
+/*   padding:250px 10px; */
 
-footer{
-    padding: 6px 40px 6px 40px;
-    background: #d6d6d6;
-    font-family: "Lucida Sans Unicode";
-    font-size: 11px;
-    text-decoration: right; 
 }
-footer a{
-    /*footer links*/
-    text-decoration: none; /*make it look like normal text no underline or anything*/
-    color: #262626;
+.hero h1, h2, a{
+  color:#24252a;
+  text-decoration:none;
+  
 }
-span.seperator{
-    color: #f1f1f1;
-    font-size: 11px;
-    font-weight: bold;
+.hero h1{
+  padding-top:200px;
+  font-size:4rem;
+  font-weight:bold;
 }
-
-/*********About Page styles*******/
-#about-page #home-image img{
-    width:70%;
-    float:left;
-    margin-bottom: 20px;
-/*    since this is a floating element, fixing the top margin of the paragraph below won't do nothing cuz the image is a floating elemtn, so instead we fix the bottom margin of the floating element iteself */
+.hero h2{
+  font-size:2rem;
+  font-weight:normal;
+  font-style:italic;
+}
+.hero a{
+  cursor:pointer;
+  font-size: 1.5rem;
+  border-radius:50px;
+  padding:10px 10px;
+  display:inline-block;
+  
+  padding:10px 25px;
+  
+  transition : transform .2s; /*animation*/
+}
+.hero .btn-work{
+  background-color: rgba(182,209,8,0.7);
+  color: rgba(237,241,240,1);
+}
+.btn-contact{
+  background-color: rgba(237,241,240,0.7);
+  color: #24252a;
+  margin:15px 10px;
+}
+.hero .btn-work:hover{
+  background-color: rgba(182,209,8,1);
+  transition: all 0.5s ease;
+  transform:scale(1.1);
+}
+.btn-contact:hover{
+  background-color: rgba(237,241,240,1);
+  transition: all 0.5s ease;
+  transform:scale(1.1);
 }
 
-#about-page #profile-info{
-    
-    width:20%;
-    float:right;
-    margin: 5px;
-/*    since we need 5px left and right, leading to total of 10 px in margin, then the width is 20%*/
-}
-#about-page .description{
-    clear: both;
-/*    this will take the paragraphs to the bottom and prevent them from going up in between the image and the #profile info div*/
+/* -------------------About me section -----------------*/
+.about-me{
+  width:100%; 
+/*   100% of the parent element (the <main> element in this case) */
+  
 }
 
-/*********Contact********/
-#contact #form{
-    width: 500px;
-    padding: 10px 10px 10px 10px;
-    margin: 0 auto;
-    box-shadow: 0px 9px 11px 5px;
-    border-radius: 5px;
+.about-me:after{ /*solve float issue*/
+  content:""; 
+  display:block; /*conent should have a block property*/
+  clear:both; /*clear both left and right for the floats*/
 }
-h1.page-heading{
-    text-align: center;
-    margin-bottom: 20px;
-/*    make it universal to all page-heading classes*/
+.about-me .col-left, .col-right{
+  width:50%; 
+/*   50% of the parent element (the about me section in this case) */
+  /*respomsive image since it resize as a precentage*/
+  
+  float:left;
+  
 }
-
-#contact #form input{
-    width: 100%;
-    border-radius: 5px;
-    height: 20px;
-    background: #e5e8e6;
+.about-me .col-left img{
+   max-width:100%; 
+   max-height:100%;
+/*   width can vary below 100% of the .col-left div, which means the image is gonna fit inside the left div*/
 }
 
-#contact #form #message{
-    width: 100%;
-    border-radius: 5px;
-    background: #e5e8e6;
+.about-me .col-left{
+  padding-right: 2% ;
+  padding-left: 5%;
 }
-#contact #form #submit {
-    height: 30px;
-    background: #27613f;
-    color: #FFFFFF;
+.about-me .col-right{
+  padding-right: 3% ;
+}
+
+.about-me p,h2,a{
+  color:#edf1f0;
+}
+
+.about-me h2{
+  font-size:2rem;
+  text-align:center;
+  text-transform: uppercase;
+  padding: 20px 0;
+  position:relative; /*to be able to move the line (after pseudo element) around and position it*/
+  margin-bottom:30px;
+}
+.about-me h2:after{ /*include the line under about me*/
+  content:"";
+  position:absolute; /*to be able to move the line (after pseudo element) around and position it*/
+  width:80px;
+  height:2px;
+  left:50%; /*50% away from left*/
+  bottom:0px; /*at the bottom of the parent element (h2)*/
+  margin-left:-40px; /*to center the line, to drag the line 40px to the left which is half of its width (80px)  */
+  background-color: rgba(182,209,8,1);
+}
+  
+
+.about-me p{
+  font-size:1.3rem;
+}
+
+.about-me a{
+  display:inline-block;
+  font-size:1.5rem;
+  background-color: rgba(182,209,8,0.7);
+  color: rgba(237,241,240,1);
+  transition: transform .2s;
+  padding: 10px 25px;
+  text-decoration:none;
+  border-radius: 50px;
+  margin-top:20px;
+}
+.about-me a:hover{
+  transition: all 0.5s ease;
+  transform:scale(1.1);
+  background-color: rgba(182,209,8,1);
+}
+@media only screen and  (max-width:600px){
+  .about-me p{
+    font-size:0.1rem;
+  }
+  .about-me a{
+    font-size: 0.1rem;
+  }
+}
+/* ------------------- skills section -----------------*/
+.skills{
+  background-color: rgba(199, 197, 196, 0.8);
+  margin-top:30px;
+  padding:40px 10px;
+  text-align: center;
+  /* border:solid white; */
+  
+}
+.skills:after{ /*get rid of floating issue*/
+  content:"";
+  display:block;
+  clear:both;
+  
+}
+
+.skills .first, .second, .third, .fourth, .fifth{
+  /* border:solid black; */
+  width: 20%;
+  display:inline-block;
+  float:left;
+  margin-top:30px;
+  text-align: center;
+}
+/* .skills .second{
+  width: 20.333333333%;
+} */
+/* .skills .fourth, .fifth{
+  border:solid black;
+  
+  width: 50%;
+  display:inline-block;
+  float:left;
+  margin-top:30px;
+  text-align: center;
+}
+ */
+
+/* .skills .first{
+  padding-left:20%;
+}
+.skills .third{
+  padding-right:18%;
+}
+.skills .fourth{
+  padding-left:30%;
+}
+.skills .fifth{
+  padding-right:30%;
+} */
+.skills h2, h4{
+  color: #24252a;
+  
+}
+
+.skills h2{
+  /* border:solid black; */
+  text-transform:uppercase;
+  position: relative;
+  padding:10px 0 20px 0;
+  font-size:2rem;
+  margin-bottom:20px;
+ 
+}
+
+.skills h2:after{
+  content:"";
+  position: absolute;
+  background-color:#3e660a;
+  width: 60px;
+  height:4px;
+  bottom:0px;
+  right:50%;
+  margin-right:-30px; /*60 divided by 2>> to move it to the right*/
+  
+}
+.skills h4{
+  font-size:1.5rem;
+  display:block;
+  
+}
+.skills i{
+  text-align: center;
+  /* padding-left:56px; */
+  font-size:2.3rem;
+  color:#24252a;
+  vertical-align: middle;
+  font-style:normal;
+  
+}
+
+.skills i:hover{
+  color:#3e660a;
+  cursor:pointer;
+  
+}
+.skills img:hover{
+  color:#3e660a;
+  cursor:pointer;
+}
+
+.icons8-matlab { 
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4Igp3aWR0aD0iNjQiIGhlaWdodD0iNjQiCnZpZXdCb3g9IjAgMCAyMjYgMjI2IgpzdHlsZT0iIGZpbGw6IzAwMDAwMDsiPjxkZWZzPjxsaW5lYXJHcmFkaWVudCB4MT0iMTEzIiB5MT0iMTguMjQ1OTciIHgyPSIxMTMiIHkyPSIyMDguMzQzNzUiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiBpZD0iY29sb3ItMV82MjM5OF9ncjEiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iIzAwMDAwMCI+PC9zdG9wPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzAwMDAwMCI+PC9zdG9wPjwvbGluZWFyR3JhZGllbnQ+PGxpbmVhckdyYWRpZW50IHgxPSIxMDAuMTA3NDEiIHkxPSIxOC4yNDU5NyIgeDI9IjEwMC4xMDc0MSIgeTI9IjIwOC4zNDM3NSIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiIGlkPSJjb2xvci0yXzYyMzk4X2dyMiI+PHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjMDAwMDAwIj48L3N0b3A+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjMDAwMDAwIj48L3N0b3A+PC9saW5lYXJHcmFkaWVudD48bGluZWFyR3JhZGllbnQgeDE9IjgyLjEwMTU2IiB5MT0iMTguMjQ1OTciIHgyPSI4Mi4xMDE1NiIgeTI9IjIwOC4zNDM3NSIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiIGlkPSJjb2xvci0zXzYyMzk4X2dyMyI+PHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjMDAwMDAwIj48L3N0b3A+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjMDAwMDAwIj48L3N0b3A+PC9saW5lYXJHcmFkaWVudD48bGluZWFyR3JhZGllbnQgeDE9IjEzMi4yNDUzMSIgeTE9IjE1LjY2NDYzIiB4Mj0iMTMyLjI0NTMxIiB5Mj0iMjA5Ljk5OTkxIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgaWQ9ImNvbG9yLTRfNjIzOThfZ3I0Ij48c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiMwMDAwMDAiPjwvc3RvcD48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiMzODM4MzgiPjwvc3RvcD48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9Im5vbnplcm8iIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBzdHJva2UtbGluZWNhcD0iYnV0dCIgc3Ryb2tlLWxpbmVqb2luPSJtaXRlciIgc3Ryb2tlLW1pdGVybGltaXQ9IjEwIiBzdHJva2UtZGFzaGFycmF5PSIiIHN0cm9rZS1kYXNob2Zmc2V0PSIwIiBmb250LWZhbWlseT0ibm9uZSIgZm9udC13ZWlnaHQ9Im5vbmUiIGZvbnQtc2l6ZT0ibm9uZSIgdGV4dC1hbmNob3I9Im5vbmUiIHN0eWxlPSJtaXgtYmxlbmQtbW9kZTogbm9ybWFsIj48cGF0aCBkPSJNMCwyMjZ2LTIyNmgyMjZ2MjI2eiIgZmlsbD0ibm9uZSI+PC9wYXRoPjxnPjxwYXRoIGQ9Ik05OC44NzUsMjA4LjM0Mzc1Yy0xLjQyNjYzLDAgLTIuNzQwMjUsLTAuODY4NjkgLTMuMjgwNTMsLTIuMjMxNzVjLTcuMDI3MTksLTE3LjczMDQxIC0yMC4xMDY5NCwtNTAuNzM3IC0yOS44MjQ5NCwtNTAuNzM3Yy00LjU0MTE5LDAgLTkuMDMyOTQsMi45MDk3NSAtOS4wNzUzMSwyLjkzOGMtMS4yMjE4MSwwLjgxOTI1IC0yLjgyODUzLDAuNzkxIC00LjAyMjA5LC0wLjA3NDE2bC00NC4xNDA2MiwtMzEuNzgxMjVjLTEuMDM4MTksLTAuNzQ4NjMgLTEuNTkyNTksLTIuMDA1NzUgLTEuNDQ0MjgsLTMuMjgwNTNjMC4xNDgzMSwtMS4yNzQ3OCAwLjk3ODE2LC0yLjM2NTk0IDIuMTY0NjYsLTIuODUzMjVsNTguMTQ1NTYsLTIzLjg2NDE5YzIuNTk1NDcsLTMuODMxNDEgMTIuNjcwMTIsLTE3Ljg3MTY2IDIzLjU4ODc1LC0yMi4wNzAzMWMxLjY0OTA5LC0wLjYzNTYzIDMuMDI2MjgsLTEuMTUxMTkgNC4xOTg2NiwtMS41ODkwNmM1LjkwNzc4LC0yLjIxNDA5IDUuOTA3NzgsLTIuMjE0MDkgMTAuNDI3NzgsLTYuNDYyMTlsMC45OTkzNCwtMC45MzkzMWM2LjE0MDg0LC01Ljc1NTk0IDE3Ljg1NzUzLC0yMy44NDY1MyAyMS40ODA1OSwtMjkuNzI5NTljMC40MTY2OSwtMC42ODE1MyAwLjg2MTYyLC0xLjQzMDE2IDEuMzMxMjgsLTIuMjIxMTZjMy45NDQ0MSwtNi42NjcgOS4zNDM2OSwtMTUuNzkxNzUgMTcuNTY0NDQsLTE1Ljc5MTc1YzkuNDI4NDQsMCAxNC40MzU3NSw5LjcxNDQ3IDIwLjAwODA2LDIyLjQxOTkxYzUuMTIwMzEsMTEuNjc3ODQgMTguNzk2ODQsNTAuMzQ4NTYgMjQuMzkwMzQsNjYuOTQxOTFjMTMuNDU0MDYsMzkuOTI3ODQgMjcuMDUyOTEsNjcuNzExNzIgMjcuMTkwNjMsNjcuOTg3MTZjMC42ODg1OSwxLjQwMTkxIDAuMzc0MzEsMy4wOTMzOCAtMC43NzY4Nyw0LjE1NjI4Yy0xLjE0NzY2LDEuMDYyOTEgLTIuODU2NzgsMS4yNDMgLTQuMjA1NzIsMC40MzQzNGMtMC4yODYwMywtMC4xNjk1IC03LjEyNjA2LC00LjMxNTE5IC0xOC4zNDEzMSwtMTUuNTQ0NTZjLTguMzE5NjMsLTguMzI2NjkgLTE1LjA5OTYyLC0xMi4yMDc1MyAtMjEuMzM5MzQsLTEyLjIwNzUzYy0xMC45Nzg2NiwwIC0xOC43MzMyOCw4LjcyOTI1IC0yOC41NTM2OSwxOS43ODU1OWwtMC41ODYxOSwwLjY2MDM0Yy0xLjE2NTMxLDEuMzEwMDkgLTIuNDQ3MTYsMi44MTQ0MSAtMy44NDU1Myw0LjQ0OTM4Yy05Ljc0NjI1LDExLjQwOTQ3IC0yNC40NzE1NiwyOC42NTYwOSAtNDEuNDU2ODcsMzEuNTU4NzhjLTAuMjAxMjgsMC4wMzE3OCAtMC40MDI1NiwwLjA0NTkxIC0wLjU5Njc4LDAuMDQ1OTF6TTY1Ljc2OTUzLDE0OC4zMTI1YzEzLjA0MDkxLDAgMjMuMzU1NjksMjIuNTAxMTMgMzUuMjcwMTIsNTIuMzg2MDljMTMuNDM5OTQsLTMuODY2NzIgMjYuMDE0NzIsLTE4LjU5MjAzIDM0LjUxNzk3LC0yOC41NDY2M2MxLjQzMDE2LC0xLjY3MzgxIDIuNzQ3MzEsLTMuMjE2OTcgMy45MzczNCwtNC41NTUzMWwwLjU4NjE5LC0wLjY2MDM0YzEwLjU2MTk3LC0xMS44ODk3MiAxOS42ODMxOSwtMjIuMTU1MDYgMzMuODMyOTEsLTIyLjE1NTA2YzEwLjY5OTY5LDAgMTkuNjkzNzgsNy42MzEwMyAyNi4zMzYwNiwxNC4yNzY4NGMyLjEwODE2LDIuMTExNjkgNC4wNTAzNCwzLjk1NSA1LjgxMjQ0LDUuNTU0NjZjLTUuMzE4MDYsLTEyLjEyNjMxIC0xMy4zNzk5MSwtMzEuNjM2NDcgLTIxLjM2NzU5LC01NS4zNDE3NWMtNS43NzM1OSwtMTcuMTMzNjMgLTE5LjMzMzU5LC01NS4zNDE3NSAtMjQuMTY0MzQsLTY2LjM2Mjc4Yy01LjE3NjgxLC0xMS43OTQzNyAtOC44NjY5NywtMTguMTg5NDcgLTEzLjU0MjM0LC0xOC4xODk0N2MtNC4xOTUxMywwIC04Ljc2MTAzLDcuNzE1NzggLTExLjQ5MDY5LDEyLjMyNzU5Yy0wLjQ5MDg0LDAuODI5ODQgLTAuOTU2OTcsMS42MTM3OCAtMS4zOTQ4NCwyLjMyMzU2Yy0wLjE0NDc4LDAuMjM2NTkgLTE0LjU0NTIyLDIzLjU3NDYyIC0yMi42NjAwMywzMS4xODQ0N2wtMC45OTIyOCwwLjkzMjI1Yy01LjM5MjIyLDUuMDcwODggLTUuNzQ4ODcsNS4yOTMzNCAtMTIuNzgzMTIsNy45Mjc2NmMtMS4xNTQ3MiwwLjQzNDM0IC0yLjUxNDI1LDAuOTQyODQgLTQuMTQ1NjksMS41NzE0MWMtOC41Mjc5NywzLjI4MDUzIC0xNy45MTA1LDE1LjcyMTEyIC0yMC44MDYxMywyMC4yMzc1OWMtMC4zOTE5NywwLjYxMDkxIC0wLjk2MDUsMS4wODc2MyAtMS42MzE0NCwxLjM2MzA2bC01My4yNjUzOCwyMS44NTg0NGwzNy4xNDUyMiwyNi43NDIxNmMyLjM4NzEyLC0xLjIxNDc1IDYuNDQ0NTMsLTIuODc0NDQgMTAuODA1NjIsLTIuODc0NDR6IiBmaWxsPSJ1cmwoI2NvbG9yLTFfNjIzOThfZ3IxKSI+PC9wYXRoPjxwYXRoIGQ9Ik01Ni4yMzg2OSwxNTguNTcwNzhsLTMuMDEyMTYsLTYuMzg4MDNjMC4yMTg5NCwtMC4xMDI0MSAyMS44NjU1LC0xMC41NzYwOSAzOC43MDk1NiwtMzYuNjgyNjJjMTYuMDAwMDksLTI0Ljc5OTk3IDIzLjkwMzAzLC00NC4xNjUzNCAyOC4xNDc1OSwtNTQuNTY4NDFjMS4wODA1NiwtMi42NDg0NCAxLjkwNjg3LC00LjY2MTI1IDIuNTM4OTcsLTUuOTY3ODFjMS41NTM3NSwtMy4yMTY5NyAzLjA1NDUzLC03LjA4NzIyIDQuNjQzNTksLTExLjE4N2M0Ljk3OTA2LC0xMi44NDMxNiAxMC4xMzExNiwtMjYuMTIwNjYgMTkuNzIyMDMsLTI2LjEyMDY2djcuMDYyNWMtNC43NTY1OSwwIC05LjYwMTQ3LDEyLjQ5MDAzIC0xMy4xMzYyNSwyMS42MTEyNWMtMS42NDIwMyw0LjIzMzk3IC0zLjE5NTc4LDguMjM0ODggLTQuODY5NTksMTEuNzA2MDljLTAuNTg5NzIsMS4yMTgyOCAtMS4zNDg5NCwzLjA5NjkxIC0yLjM1ODg3LDUuNTY4NzhjLTQuMzMyODQsMTAuNjE0OTQgLTEyLjM5NDY5LDMwLjM3MjI4IC0yOC43NTE0NCw1NS43MjY2NmMtMTcuOTk4NzgsMjcuODkzMzQgLTQwLjY3NjQ3LDM4Ljc4NzI1IC00MS42MzM0NCwzOS4yMzkyNXoiIGZpbGw9InVybCgjY29sb3ItMl82MjM5OF9ncjIpIj48L3BhdGg+PHBhdGggZD0iTTkyLjM0MjE5LDEyMC42ODA0N2wtMjQuNzE4NzUsLTE4LjUzOTA2bDQuMjM3NSwtNS42NWwyNC43MTg3NSwxOC41MzkwNnoiIGZpbGw9InVybCgjY29sb3ItM182MjM5OF9ncjMpIj48L3BhdGg+PHBhdGggZD0iTTEzNC43OTg0MSwxNjIuMjQ2ODFjMTEuMDEzOTcsLTEyLjM5ODIyIDIxLjQyNzYzLC0yNC4xMTg0NCAzOC4yMzI4NCwtMjQuNTE3NDdjMCwwIC0xMS45MTc5NywtNTIuNTM3OTQgLTIyLjA3MDMxLC05NS43OTU3NWMtMi4wNjIyNSwtOC43ODkyOCAtMi44ODUwMywtMTAuMTUyMzQgLTMuNzQzMTMsLTEwLjE1MjM0Yy0wLjU4MjY2LDAgLTEuMjc0NzgsMS4yODg5MSAtMS44MjIxMiw0LjI1ODY5Yy0yLjkzNDQ3LDE1Ljg1ODg0IC0xNi44MDUyMiw3NC45MTkgLTI3Ljk4MTYzLDEwMy40NDQ0NGMtNC4yNjkyOCwxMC44OTc0NCAtMTEuOTAzODQsMTcuMzA2NjYgLTE4LjUzOTA2LDIwLjMwNDY5Yy0zLjAzNjg3LDEuMzczNjYgLTcuNDE1NjMsMi42NDg0NCAtNy40MTU2MywyLjY0ODQ0YzQuNTk0MTYsOC4wNDc3MiA4Ljk1ODc4LDE3LjkzODc1IDEzLjQ1MDUzLDI4Ljk2MzMxYzkuNDg0OTQsLTUuMzQyNzggMTguNzYxNTMsLTE2LjIwODQ0IDI1LjI3NjY5LC0yMy44MzU5NGMxLjQ2MTk0LC0xLjcxMjY2IDIuODEwODgsLTMuMjg3NTkgNC4wMzI2OSwtNC42NjQ3OHoiIGZpbGw9InVybCgjY29sb3ItNF82MjM5OF9ncjQpIj48L3BhdGg+PC9nPjwvZz48L3N2Zz4=') 50% 50% no-repeat;
+  background-size: 100%; 
+}
+
+.icons8-matlab:hover { 
+  cursor:pointer;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4Igp3aWR0aD0iNjQiIGhlaWdodD0iNjQiCnZpZXdCb3g9IjAgMCAyMjYgMjI2IgpzdHlsZT0iIGZpbGw6IzAwMDAwMDsiPjxkZWZzPjxsaW5lYXJHcmFkaWVudCB4MT0iMTEzIiB5MT0iMTguMjQ1OTciIHgyPSIxMTMiIHkyPSIyMDguMzQzNzUiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiBpZD0iY29sb3ItMV82MjM5OF9ncjEiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iIzNlNjYwYSI+PC9zdG9wPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzAwMDAwMCI+PC9zdG9wPjwvbGluZWFyR3JhZGllbnQ+PGxpbmVhckdyYWRpZW50IHgxPSIxMDAuMTA3NDEiIHkxPSIxOC4yNDU5NyIgeDI9IjEwMC4xMDc0MSIgeTI9IjIwOC4zNDM3NSIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiIGlkPSJjb2xvci0yXzYyMzk4X2dyMiI+PHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjM2U2NjBhIj48L3N0b3A+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjMDAwMDAwIj48L3N0b3A+PC9saW5lYXJHcmFkaWVudD48bGluZWFyR3JhZGllbnQgeDE9IjgyLjEwMTU2IiB5MT0iMTguMjQ1OTciIHgyPSI4Mi4xMDE1NiIgeTI9IjIwOC4zNDM3NSIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiIGlkPSJjb2xvci0zXzYyMzk4X2dyMyI+PHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjM2U2NjBhIj48L3N0b3A+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjMDAwMDAwIj48L3N0b3A+PC9saW5lYXJHcmFkaWVudD48bGluZWFyR3JhZGllbnQgeDE9IjEzMi4yNDUzMSIgeTE9IjE1LjY2NDYzIiB4Mj0iMTMyLjI0NTMxIiB5Mj0iMjA5Ljk5OTkxIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgaWQ9ImNvbG9yLTRfNjIzOThfZ3I0Ij48c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiM3Y2NjMTQiPjwvc3RvcD48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiMzODM4MzgiPjwvc3RvcD48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9Im5vbnplcm8iIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBzdHJva2UtbGluZWNhcD0iYnV0dCIgc3Ryb2tlLWxpbmVqb2luPSJtaXRlciIgc3Ryb2tlLW1pdGVybGltaXQ9IjEwIiBzdHJva2UtZGFzaGFycmF5PSIiIHN0cm9rZS1kYXNob2Zmc2V0PSIwIiBmb250LWZhbWlseT0ibm9uZSIgZm9udC13ZWlnaHQ9Im5vbmUiIGZvbnQtc2l6ZT0ibm9uZSIgdGV4dC1hbmNob3I9Im5vbmUiIHN0eWxlPSJtaXgtYmxlbmQtbW9kZTogbm9ybWFsIj48cGF0aCBkPSJNMCwyMjZ2LTIyNmgyMjZ2MjI2eiIgZmlsbD0ibm9uZSI+PC9wYXRoPjxnPjxwYXRoIGQ9Ik05OC44NzUsMjA4LjM0Mzc1Yy0xLjQyNjYzLDAgLTIuNzQwMjUsLTAuODY4NjkgLTMuMjgwNTMsLTIuMjMxNzVjLTcuMDI3MTksLTE3LjczMDQxIC0yMC4xMDY5NCwtNTAuNzM3IC0yOS44MjQ5NCwtNTAuNzM3Yy00LjU0MTE5LDAgLTkuMDMyOTQsMi45MDk3NSAtOS4wNzUzMSwyLjkzOGMtMS4yMjE4MSwwLjgxOTI1IC0yLjgyODUzLDAuNzkxIC00LjAyMjA5LC0wLjA3NDE2bC00NC4xNDA2MiwtMzEuNzgxMjVjLTEuMDM4MTksLTAuNzQ4NjMgLTEuNTkyNTksLTIuMDA1NzUgLTEuNDQ0MjgsLTMuMjgwNTNjMC4xNDgzMSwtMS4yNzQ3OCAwLjk3ODE2LC0yLjM2NTk0IDIuMTY0NjYsLTIuODUzMjVsNTguMTQ1NTYsLTIzLjg2NDE5YzIuNTk1NDcsLTMuODMxNDEgMTIuNjcwMTIsLTE3Ljg3MTY2IDIzLjU4ODc1LC0yMi4wNzAzMWMxLjY0OTA5LC0wLjYzNTYzIDMuMDI2MjgsLTEuMTUxMTkgNC4xOTg2NiwtMS41ODkwNmM1LjkwNzc4LC0yLjIxNDA5IDUuOTA3NzgsLTIuMjE0MDkgMTAuNDI3NzgsLTYuNDYyMTlsMC45OTkzNCwtMC45MzkzMWM2LjE0MDg0LC01Ljc1NTk0IDE3Ljg1NzUzLC0yMy44NDY1MyAyMS40ODA1OSwtMjkuNzI5NTljMC40MTY2OSwtMC42ODE1MyAwLjg2MTYyLC0xLjQzMDE2IDEuMzMxMjgsLTIuMjIxMTZjMy45NDQ0MSwtNi42NjcgOS4zNDM2OSwtMTUuNzkxNzUgMTcuNTY0NDQsLTE1Ljc5MTc1YzkuNDI4NDQsMCAxNC40MzU3NSw5LjcxNDQ3IDIwLjAwODA2LDIyLjQxOTkxYzUuMTIwMzEsMTEuNjc3ODQgMTguNzk2ODQsNTAuMzQ4NTYgMjQuMzkwMzQsNjYuOTQxOTFjMTMuNDU0MDYsMzkuOTI3ODQgMjcuMDUyOTEsNjcuNzExNzIgMjcuMTkwNjMsNjcuOTg3MTZjMC42ODg1OSwxLjQwMTkxIDAuMzc0MzEsMy4wOTMzOCAtMC43NzY4Nyw0LjE1NjI4Yy0xLjE0NzY2LDEuMDYyOTEgLTIuODU2NzgsMS4yNDMgLTQuMjA1NzIsMC40MzQzNGMtMC4yODYwMywtMC4xNjk1IC03LjEyNjA2LC00LjMxNTE5IC0xOC4zNDEzMSwtMTUuNTQ0NTZjLTguMzE5NjMsLTguMzI2NjkgLTE1LjA5OTYyLC0xMi4yMDc1MyAtMjEuMzM5MzQsLTEyLjIwNzUzYy0xMC45Nzg2NiwwIC0xOC43MzMyOCw4LjcyOTI1IC0yOC41NTM2OSwxOS43ODU1OWwtMC41ODYxOSwwLjY2MDM0Yy0xLjE2NTMxLDEuMzEwMDkgLTIuNDQ3MTYsMi44MTQ0MSAtMy44NDU1Myw0LjQ0OTM4Yy05Ljc0NjI1LDExLjQwOTQ3IC0yNC40NzE1NiwyOC42NTYwOSAtNDEuNDU2ODcsMzEuNTU4NzhjLTAuMjAxMjgsMC4wMzE3OCAtMC40MDI1NiwwLjA0NTkxIC0wLjU5Njc4LDAuMDQ1OTF6TTY1Ljc2OTUzLDE0OC4zMTI1YzEzLjA0MDkxLDAgMjMuMzU1NjksMjIuNTAxMTMgMzUuMjcwMTIsNTIuMzg2MDljMTMuNDM5OTQsLTMuODY2NzIgMjYuMDE0NzIsLTE4LjU5MjAzIDM0LjUxNzk3LC0yOC41NDY2M2MxLjQzMDE2LC0xLjY3MzgxIDIuNzQ3MzEsLTMuMjE2OTcgMy45MzczNCwtNC41NTUzMWwwLjU4NjE5LC0wLjY2MDM0YzEwLjU2MTk3LC0xMS44ODk3MiAxOS42ODMxOSwtMjIuMTU1MDYgMzMuODMyOTEsLTIyLjE1NTA2YzEwLjY5OTY5LDAgMTkuNjkzNzgsNy42MzEwMyAyNi4zMzYwNiwxNC4yNzY4NGMyLjEwODE2LDIuMTExNjkgNC4wNTAzNCwzLjk1NSA1LjgxMjQ0LDUuNTU0NjZjLTUuMzE4MDYsLTEyLjEyNjMxIC0xMy4zNzk5MSwtMzEuNjM2NDcgLTIxLjM2NzU5LC01NS4zNDE3NWMtNS43NzM1OSwtMTcuMTMzNjMgLTE5LjMzMzU5LC01NS4zNDE3NSAtMjQuMTY0MzQsLTY2LjM2Mjc4Yy01LjE3NjgxLC0xMS43OTQzNyAtOC44NjY5NywtMTguMTg5NDcgLTEzLjU0MjM0LC0xOC4xODk0N2MtNC4xOTUxMywwIC04Ljc2MTAzLDcuNzE1NzggLTExLjQ5MDY5LDEyLjMyNzU5Yy0wLjQ5MDg0LDAuODI5ODQgLTAuOTU2OTcsMS42MTM3OCAtMS4zOTQ4NCwyLjMyMzU2Yy0wLjE0NDc4LDAuMjM2NTkgLTE0LjU0NTIyLDIzLjU3NDYyIC0yMi42NjAwMywzMS4xODQ0N2wtMC45OTIyOCwwLjkzMjI1Yy01LjM5MjIyLDUuMDcwODggLTUuNzQ4ODcsNS4yOTMzNCAtMTIuNzgzMTIsNy45Mjc2NmMtMS4xNTQ3MiwwLjQzNDM0IC0yLjUxNDI1LDAuOTQyODQgLTQuMTQ1NjksMS41NzE0MWMtOC41Mjc5NywzLjI4MDUzIC0xNy45MTA1LDE1LjcyMTEyIC0yMC44MDYxMywyMC4yMzc1OWMtMC4zOTE5NywwLjYxMDkxIC0wLjk2MDUsMS4wODc2MyAtMS42MzE0NCwxLjM2MzA2bC01My4yNjUzOCwyMS44NTg0NGwzNy4xNDUyMiwyNi43NDIxNmMyLjM4NzEyLC0xLjIxNDc1IDYuNDQ0NTMsLTIuODc0NDQgMTAuODA1NjIsLTIuODc0NDR6IiBmaWxsPSJ1cmwoI2NvbG9yLTFfNjIzOThfZ3IxKSI+PC9wYXRoPjxwYXRoIGQ9Ik01Ni4yMzg2OSwxNTguNTcwNzhsLTMuMDEyMTYsLTYuMzg4MDNjMC4yMTg5NCwtMC4xMDI0MSAyMS44NjU1LC0xMC41NzYwOSAzOC43MDk1NiwtMzYuNjgyNjJjMTYuMDAwMDksLTI0Ljc5OTk3IDIzLjkwMzAzLC00NC4xNjUzNCAyOC4xNDc1OSwtNTQuNTY4NDFjMS4wODA1NiwtMi42NDg0NCAxLjkwNjg3LC00LjY2MTI1IDIuNTM4OTcsLTUuOTY3ODFjMS41NTM3NSwtMy4yMTY5NyAzLjA1NDUzLC03LjA4NzIyIDQuNjQzNTksLTExLjE4N2M0Ljk3OTA2LC0xMi44NDMxNiAxMC4xMzExNiwtMjYuMTIwNjYgMTkuNzIyMDMsLTI2LjEyMDY2djcuMDYyNWMtNC43NTY1OSwwIC05LjYwMTQ3LDEyLjQ5MDAzIC0xMy4xMzYyNSwyMS42MTEyNWMtMS42NDIwMyw0LjIzMzk3IC0zLjE5NTc4LDguMjM0ODggLTQuODY5NTksMTEuNzA2MDljLTAuNTg5NzIsMS4yMTgyOCAtMS4zNDg5NCwzLjA5NjkxIC0yLjM1ODg3LDUuNTY4NzhjLTQuMzMyODQsMTAuNjE0OTQgLTEyLjM5NDY5LDMwLjM3MjI4IC0yOC43NTE0NCw1NS43MjY2NmMtMTcuOTk4NzgsMjcuODkzMzQgLTQwLjY3NjQ3LDM4Ljc4NzI1IC00MS42MzM0NCwzOS4yMzkyNXoiIGZpbGw9InVybCgjY29sb3ItMl82MjM5OF9ncjIpIj48L3BhdGg+PHBhdGggZD0iTTkyLjM0MjE5LDEyMC42ODA0N2wtMjQuNzE4NzUsLTE4LjUzOTA2bDQuMjM3NSwtNS42NWwyNC43MTg3NSwxOC41MzkwNnoiIGZpbGw9InVybCgjY29sb3ItM182MjM5OF9ncjMpIj48L3BhdGg+PHBhdGggZD0iTTEzNC43OTg0MSwxNjIuMjQ2ODFjMTEuMDEzOTcsLTEyLjM5ODIyIDIxLjQyNzYzLC0yNC4xMTg0NCAzOC4yMzI4NCwtMjQuNTE3NDdjMCwwIC0xMS45MTc5NywtNTIuNTM3OTQgLTIyLjA3MDMxLC05NS43OTU3NWMtMi4wNjIyNSwtOC43ODkyOCAtMi44ODUwMywtMTAuMTUyMzQgLTMuNzQzMTMsLTEwLjE1MjM0Yy0wLjU4MjY2LDAgLTEuMjc0NzgsMS4yODg5MSAtMS44MjIxMiw0LjI1ODY5Yy0yLjkzNDQ3LDE1Ljg1ODg0IC0xNi44MDUyMiw3NC45MTkgLTI3Ljk4MTYzLDEwMy40NDQ0NGMtNC4yNjkyOCwxMC44OTc0NCAtMTEuOTAzODQsMTcuMzA2NjYgLTE4LjUzOTA2LDIwLjMwNDY5Yy0zLjAzNjg3LDEuMzczNjYgLTcuNDE1NjMsMi42NDg0NCAtNy40MTU2MywyLjY0ODQ0YzQuNTk0MTYsOC4wNDc3MiA4Ljk1ODc4LDE3LjkzODc1IDEzLjQ1MDUzLDI4Ljk2MzMxYzkuNDg0OTQsLTUuMzQyNzggMTguNzYxNTMsLTE2LjIwODQ0IDI1LjI3NjY5LC0yMy44MzU5NGMxLjQ2MTk0LC0xLjcxMjY2IDIuODEwODgsLTMuMjg3NTkgNC4wMzI2OSwtNC42NjQ3OHoiIGZpbGw9InVybCgjY29sb3ItNF82MjM5OF9ncjQpIj48L3BhdGg+PC9nPjwvZz48L3N2Zz4=') 50% 50% no-repeat;
+  background-size: 100%;
+  }
+  /* ------------------- work section -----------------*/
+  .project-tile{
+  
+  margin-top:30px;
+  padding:40px 10px;
+  text-align: center;
+  
+  }  
+  .project-tile:after{ /*get rid of floating issue*/
+    content:"";
+    display:block;
+    clear:both;
+  }
+
+.project-tile h2{
+  /* border:solid black; */
+text-transform:uppercase;
+position: relative;
+padding:10px 0 20px 0;
+font-size:2rem;
+margin-bottom:20px;
+
+}
+
+.project-tile h2:after{
+  content:"";
+  position:absolute; /*to be able to move the line (after pseudo element) around and position it*/
+  width:80px;
+  height:2px;
+  left:50%; /*50% away from left*/
+  bottom:0px; /*at the bottom of the parent element (h2)*/
+  margin-left:-40px; /*to center the line, to drag the line 40px to the left which is half of its width (80px)  */
+  background-color: rgba(182,209,8,1);
+}
+.project-tile  .first-project,
+ .second-project, 
+ .third-project, 
+ .forth-project{
+  height:400px;
+  width: 50%;
+  display:inline-block;
+  float:left;
+  margin-top:30px;
+  text-align: center;
+  padding-bottom:5%;
+  
+}
+         
+
+.project-tile img{
+  height:100%;
+  width:90%;
+  border: 3px solid #315700;;
+  
+}
+.project-tile img:hover{
+  
+  outline: 200px solid rgba( 62, 102 , 10, 0.3) ;
+    outline-offset: -200px;
+    overflow: hidden;
+    position: relative;
+    height:100%;
+    width:90%;
+  
+}
+.project-tile p{
+  padding-top:10px;
+ 
+  font-size:1.3rem;
+}
+.project-tile i{
+  font-size:2.3rem;
+  
+}
+.project-tile .ion-social-github{
+  padding-left:15px;
+}
+.project-tile p:hover, i:hover{
+  color:rgba(182,209,9,1);
+}
+/* ------------------- contact section -----------------*/
+.contact-section{
+  text-align: center;
+  margin: 30px 0;
+}
+.contact-section h2{
+  font-size: 1.5rem;
+  margin-bottom: 15px;;
+}
+.contact-section a{
+  font-size: 1.5rem;
+  padding:10px 10px;
+}
+
+.contact-section .btn-contact{
+  margin: 20px 10px;
+  cursor:pointer;
+  font-size: 1.5rem;
+  border-radius:50px;
+  padding:0 10px;
+  display:inline-block;
+  padding:10px 25px;
+  
+  transition : transform .2s; /*animation*/
+  color:#24252a;
+  text-decoration:none;
+  
+  background-color: rgba(237,241,240,1);
+  color: #24252a;
+  margin:15px 10px;
+}
+
+.contact-section .btn-contact:hover{
+  background-color: rgba(182,209,9,1);
+  transition: all 0.5s ease;
+  transform:scale(1.1);
+}
+
+/*----------footer section------------------*/
+.footer-text{
+  text-align:center;
+  background-color: rgba(237,241,240,0.3);
+}
+.footer-text p{
+  font-size:0.8rem;
+}
+.footer-text .ion-coffee{
+  font-size:1.1rem;
+}
+.footer-text a:hover{
+  color: rgba(182,209,9,1);
 }
