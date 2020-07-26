@@ -16,7 +16,6 @@ body{
 html{
   scroll-behavior: smooth;
 }
-
 /* ----------navigation section---------- */
 .navbar{
 
@@ -239,6 +238,10 @@ height:100hv;
   margin-top:30px;
   text-align: center;
 }
+.lni{
+  padding:0;
+}
+
 /* .skills .second{
   width: 20.333333333%;
 } */
